@@ -1,42 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SE5 Group Project 01</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <nav>
-        </nav>
+      <nav></nav>
     </header>
 
-    <main>
-        <section class="hero">
-        </section>
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="py-24 px-4 text-center bg-gradient-to-b from-slate-900 to-slate-800 text-white"
+      >
+        <h1 class="font-['Space_Grotesk'] text-5xl lg:text-6xl font-bold mb-4">
+          Transform Your Business with TechNova Solutions
+        </h1>
 
-        <section class="stats">
-        </section>
+        <p
+          class="font-['Inter'] text-base lg:text-lg font-normal text-slate-400 max-w-xl mx-auto mb-6"
+        >
+          Driving digital transformation for mid-sized enterprises with scalable
+          software, cloud migration, and IT consulting expertise.
+        </p>
 
-        <section class="about-us">
-        </section>
+        <button
+          class="font-['Inter'] text-base font-semibold px-6 py-3 bg-blue-600 hover:bg-teal-400 rounded text-white transition-colors duration-300"
+        >
+          Get Started
+        </button>
+      </section>
 
-        <section class="our-team">
-        </section>
+      <!-- Stats Section -->
+      <section id="stats" class="py-24 px-4 bg-slate-50">
+        <div class="flex flex-col md:flex-row justify-center gap-6">
+          <div class="flex-1 p-6 bg-white rounded shadow text-center">
+            <h3
+              class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-blue-600"
+            >
+              50+
+            </h3>
+            <p class="font-['Inter'] text-sm font-normal text-slate-500 mt-2">
+              Projects Delivered
+            </p>
+          </div>
 
-        <section class="our-services">
-        </section>
+          <div class="flex-1 p-6 bg-white rounded shadow text-center">
+            <h3
+              class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-blue-600"
+            >
+              10+
+            </h3>
+            <p class="font-['Inter'] text-sm font-normal text-slate-500 mt-2">
+              Years of Combined Experience
+            </p>
+          </div>
 
-        <section class="contact-us">
-        </section>
+          <div class="flex-1 p-6 bg-white rounded shadow text-center">
+            <h3
+              class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-blue-600"
+            >
+              100%
+            </h3>
+            <p class="font-['Inter'] text-sm font-normal text-slate-500 mt-2">
+              Client Satisfaction Rate
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <section class="about-us"></section>
+
+      <section class="our-team"></section>
+
+      <section class="our-services"></section>
+
+      <section class="contact-us"></section>
     </main>
 
     <footer>
-        <p>&copy; 2026 WBS Coding School - SE5 Group Project 01. All rights reserved.</p>
+      <p>
+        &copy; 2026 WBS Coding School - SE5 Group Project 01. All rights
+        reserved.
+      </p>
     </footer>
-
-</body>
+  </body>
 </html>
