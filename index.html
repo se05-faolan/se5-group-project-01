@@ -4,16 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>SE5 Group Project 01</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <title>TechNova Solutions</title>
+    <style>
+        body {font-family: 'Inter', sans-serif;}
+        h1, h2, h3, h4, h5, h6 {font-family: 'Space Grotesk', sans-serif;}
+    </style>
 </head>
 <body>
 
-    <header>
-        <nav>
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+
+        <nav class="container mx-auto px-4 lg:px-8 xl:px-12 py-4" aria-label="Main navigation">
+
+            <!-- MOBILE AND TABLETS (max. 1023px) -->
+            <div class="lg:hidden flex items-center justify-between">
+
+                <!-- LOGO (LEFT SIDE) -->
+                <a href="#hero" class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0" aria-label="Home">
+                    <span class="text-xs text-white font-semibold">LOGO</span>
+                </a>
+
+                <!-- COMPANY'S NAME (CENTER) -->
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <h1 class="text-xl sm:text-2xl font-bold text-gray-800">TechNova Solutions</h1>
+                </div>
+
+                <!-- HAMBURGER MENU (RIGHT SIDE) -->
+                <button 
+                    id="menuToggle" 
+                    class="w-10 h-10 flex flex-col justify-center items-center space-y-1.5 hover:bg-slate-50 rounded-lg transition-colors flex-shrink-0"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="mobileMenu">
+                    <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300" id="line1"></span>
+                    <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300" id="line2"></span>
+                    <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300" id="line3"></span>
+                </button>
+            </div>
+
+            <!-- MENU MOBILE/TABLET -->
+            <nav id="mobileMenu" class="lg:hidden hidden mt-4 pb-4" aria-label="Mobile navigation">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#hero" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Home</a></li>
+                    <li><a href="#stats" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Stats</a></li>
+                    <li><a href="#about-us" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">About Us</a></li>
+                    <li><a href="#our-team" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Team</a></li>
+                    <li><a href="#our-services" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Services</a></li>
+                    <li><a href="#contact-us" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- DESKTOP (1024px OR BIGGER) -->
+            <div class="hidden lg:flex items-center justify-between">
+
+                <!-- LOGO (LEFT SIDE) -->
+                <a href="#hero" class="w-14 h-14 xl:w-16 xl:h-16 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 hover:bg-cyan-500 transition-colors" aria-label="Home">
+                    <span class="text-xs text-white font-semibold">LOGO</span>
+                </a>
+
+                <!-- COMPANY'S NAME (CENTER) -->
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <h1 class="text-3xl xl:text-4xl font-bold text-slate-800">TechNova Solutions</h1>
+                </div>
+
+                <!-- MENU DESKTOP (RIGHT SIDE) -->
+                <nav aria-label="Desktop navigation">
+                    <ul class="flex items-center space-x-2 xl:space-x-4">
+                        <li><a href="#hero" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Home</a></li>
+                        <li><a href="#stats" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Stats</a></li>
+                        <li><a href="#about-us" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">About Us</a></li>
+                        <li><a href="#our-team" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Team</a></li>
+                        <li><a href="#our-services" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Services</a></li>
+                        <li><a href="#contact-us" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="pt-20">
         <section class="hero">
         </section>
 
@@ -35,8 +106,45 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 WBS Coding School - SE5 Group Project 01. All rights reserved.</p>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = mobileMenu.classList.toggle('hidden');
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                
+                // X ANIMATION
+                if (!mobileMenu.classList.contains('hidden')) {
+                    line1.style.transform = 'rotate(45deg) translateY(8px)';
+                    line2.style.opacity = '0';
+                    line3.style.transform = 'rotate(-45deg) translateY(-8px)';
+                } else {
+                    line1.style.transform = 'rotate(0) translateY(0)';
+                    line2.style.opacity = '1';
+                    line3.style.transform = 'rotate(0) translateY(0)';
+                }
+            });
+
+            // CLOSING MENU ON CLICK
+            const menuLinks = document.querySelectorAll('#mobileMenu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    line1.style.transform = 'rotate(0) translateY(0)';
+                    line2.style.opacity = '1';
+                    line3.style.transform = 'rotate(0) translateY(0)';
+                });
+            });
+        }
+    </script>
 
 </body>
 </html>
