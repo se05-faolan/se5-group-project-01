@@ -1,42 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>SE5 Group Project 01</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <header>
-        <nav>
-        </nav>
+      <nav></nav>
     </header>
 
     <main>
-        <section class="hero">
-        </section>
+      <section class="hero"></section>
 
-        <section class="stats">
-        </section>
+      <section class="stats"></section>
 
-        <section class="about-us">
-        </section>
+      <section class="about-us"></section>
 
-        <section class="our-team">
-        </section>
+      <section class="our-team"></section>
 
-        <section class="our-services">
-        </section>
+      <section class="our-services">
+        <section class="bg-white">
+          <div class="mx-auto w-full max-w-[390px] px-4 py-16">
+            <!-- Heading -->
+            <h2 class="text-center text-3xl font-bold text-[#1e293b]">
+              Our Services
+            </h2>
 
-        <section class="contact-us">
-        </section>
+            <!-- Services list -->
+            <div class="mt-10 flex flex-col gap-6">
+              <!-- Card 1 -->
+              <article
+                class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <!-- не забудь вставить картинку -->
+                <img 
+                    class="h-44 w-full object-cover"
+                    alt="service-1"
+                    src="https://media.istockphoto.com/id/2156387160/de/foto/hispanisches-lateinamerikanisches-paar-software-ingenieur-entwickler-verwenden-computer-und.jpg?s=1024x1024&w=is&k=20&c=YUxpfhfRyVp-hOY0OV1Uo8_dWSKtgJo3AHJ3aoSeEwo="
+                ></img>
 
+                <div class="px-6 py-5 text-center">
+                  <h3 class="text-xl font-semibold text-[#1e293b]">
+                    IT Consulting
+                  </h3>
+
+                  <p class="mt-2 text-sm leading-6 text-[#475569]">
+                    Strategic technology planning, system architecture review, and digital transformation roadmaps tailored to your business goals.
+                  </p>
+
+                  <!-- Accent line -->
+                  <div class="mt-4 flex justify-center">
+                    <span class="h-1 w-10 rounded-full bg-[#06b6d4]"></span>
+                  </div>
+
+                  <!-- Optional accent link -->
+                  <div class="mt-4">
+                    <a
+                      href="#"
+                      class="text-sm font-semibold text-[#2563eb] hover:underline"
+                    >
+                      Learn more
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article
+                class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <img
+                 class="h-44 w-full object-cover"
+                 alt="service-2"
+                 src="https://media.istockphoto.com/id/1355638834/de/foto/nahaufnahme-portr%C3%A4t-eines-software-ingenieurs-der-am-computer-arbeitet-codezeile-die-in-einer.jpg?s=1024x1024&w=is&k=20&c=SrZgBJLsUlDOMSvFphlX1Ucfjk_sGPWuJ1SiD-RDnP4="
+                ></img>
+
+                <div class="px-6 py-5 text-center">
+                  <h3 class="text-xl font-semibold text-[#1e293b]">
+                    Custom App Development
+                  </h3>
+
+                  <p class="mt-2 text-sm leading-6 text-[#475569]">
+                    Native mobile apps (iOS/Android) and responsive web applications built with modern frameworks like React, Node.js, and Flutter.
+                  </p>
+
+                  <div class="mt-4 flex justify-center">
+                    <span class="h-1 w-10 rounded-full bg-[#06b6d4]"></span>
+                  </div>
+
+                  <div class="mt-4">
+                    <a
+                      href="#"
+                      class="text-sm font-semibold text-[#2563eb] hover:underline"
+                    >
+                      Learn more
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article
+                class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <img 
+                    class="h-44 w-full object-cover"
+                    alt="service-3"
+                    src="https://media.istockphoto.com/id/1903606349/de/foto/api-konzept-application-programming-interface-anbindung-von-diensten-im-internet.jpg?s=1024x1024&w=is&k=20&c=_sT6sPZqCHe6P_Cu7Eaq26NelCkseghkxj1vfq7AhXY="
+                ></img>
+
+                <div class="px-6 py-5 text-center">
+                  <h3 class="text-xl font-semibold text-[#1e293b]">
+                    API Integration
+                  </h3>
+
+                  <p class="mt-2 text-sm leading-6 text-[#475569]">
+                   Connect your existing systems with third-party services and build custom APIs for data exchange.
+                  </p>
+
+                  <div class="mt-4 flex justify-center">
+                    <span class="h-1 w-10 rounded-full bg-[#06b6d4]"></span>
+                  </div>
+
+                  <div class="mt-4">
+                    <a
+                      href="#"
+                      class="text-sm font-semibold text-[#2563eb] hover:underline"
+                    >
+                      Learn more
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="contact-us"></section>
     </main>
 
     <footer>
-        <p>&copy; 2026 WBS Coding School - SE5 Group Project 01. All rights reserved.</p>
+      <p>
+        &copy; 2026 WBS Coding School - SE5 Group Project 01. All rights
+        reserved.
+      </p>
     </footer>
-
-</body>
+  </body>
 </html>
