@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechNova Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-navy': '#1e293b',
+                        'brand-slate': '#475569',
+                        'brand-blue': '#2563eb',
+                        'brand-teal': '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50">
+
+    <section class="bg-white py-[64px] px-[16px] font-sans">
+        <div class="max-w-[768px] mx-auto flex flex-col items-center gap-[64px] text-center">
+            
+            <div class="flex flex-col items-center gap-6">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-brand-navy">About Us</h2>
+                <p class="text-base lg:text-lg text-brand-slate leading-relaxed">
+                    TechNova Solutions is a dynamic IT consulting firm specializing in digital transformation for mid-sized enterprises. Founded in 2018, we help businesses modernize their technology infrastructure and build scalable software solutions. Our team combines technical expertise with business acumen to deliver results that drive growth and efficiency.
+                </p>
+                <div class="w-full h-80 bg-slate-200 rounded-2xl overflow-hidden shadow-inner">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="TechNova Office" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-12 w-full">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-brand-navy">Our Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+                    
+                    <div class="flex flex-col items-center group">
+                        <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah Chen" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg transition-transform group-hover:scale-105">
+                        <h3 class="font-display text-xl font-bold text-brand-navy">Sarah Chen</h3>
+                        <p class="text-brand-blue font-medium text-sm uppercase mb-2">CEO & Co-founder</p>
+                        <p class="text-sm text-brand-slate">Former software architect with 15 years of experience in enterprise systems. Leads strategic vision and client partnerships.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center group">
+                        <img src="https://i.pravatar.cc/150?u=marcus" alt="Marcus Rodriguez" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg transition-transform group-hover:scale-105">
+                        <h3 class="font-display text-xl font-bold text-brand-navy">Marcus Rodriguez</h3>
+                        <p class="text-brand-blue font-medium text-sm uppercase mb-2">CTO & Co-founder</p>
+                        <p class="text-sm text-brand-slate">Full-stack developer and cloud architecture specialist. Oversees technical delivery and innovation.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center group">
+                        <img src="https://i.pravatar.cc/150?u=aisha" alt="Aisha Patel" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg transition-transform group-hover:scale-105">
+                        <h3 class="font-display text-xl font-bold text-brand-navy">Aisha Patel</h3>
+                        <p class="text-brand-blue font-medium text-sm uppercase mb-2">Lead Consultant</p>
+                        <p class="text-sm text-brand-slate">Business analyst with expertise in process optimization and digital strategy. Manages client engagements.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center group">
+                        <img src="https://i.pravatar.cc/150?u=james" alt="James Kim" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg transition-transform group-hover:scale-105">
+                        <h3 class="font-display text-xl font-bold text-brand-navy">James Kim</h3>
+                        <p class="text-brand-blue font-medium text-sm uppercase mb-2">Senior Developer</p>
+                        <p class="text-sm text-brand-slate">Mobile and web application specialist. Leads development teams on client projects.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center group md:col-span-2">
+                        <img src="https://i.pravatar.cc/150?u=elena" alt="Elena Volkov" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg transition-transform group-hover:scale-105">
+                        <h3 class="font-display text-xl font-bold text-brand-navy">Elena Volkov</h3>
+                        <p class="text-brand-blue font-medium text-sm uppercase mb-2">UX/UI Designer</p>
+                        <p class="text-sm text-brand-slate max-w-[320px]">Creates intuitive user experiences with a focus on accessibility and modern design principles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center gap-12 w-full py-12 px-6 bg-slate-50 rounded-[2rem]">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-brand-navy">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div class="flex flex-col items-center">
+                        <h4 class="font-display text-lg font-bold text-brand-navy mb-2">IT Consulting</h4>
+                        <p class="text-sm text-brand-slate">Strategic technology planning, system architecture review, and digital transformation roadmaps.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h4 class="font-display text-lg font-bold text-brand-navy mb-2">Custom App Development</h4>
+                        <p class="text-sm text-brand-slate">Native mobile apps and responsive web applications built with React and Node.js.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h4 class="font-display text-lg font-bold text-brand-navy mb-2">Cloud Migration</h4>
+                        <p class="text-sm text-brand-slate">Seamless transition to AWS, Azure, or Google Cloud with optimized infrastructure.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h4 class="font-display text-lg font-bold text-brand-navy mb-2">API Integration</h4>
+                        <p class="text-sm text-brand-slate">Connect existing systems with third-party services and build custom APIs.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h4 class="font-display text-lg font-bold text-brand-navy mb-2">DevOps & Automation</h4>
+                        <p class="text-sm text-brand-slate">CI/CD pipeline setup and automated testing to accelerate development.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <h4 class="font-display text-lg font-bold text-brand-navy mb-2">Maintenance & Support</h4>
+                        <p class="text-sm text-brand-slate">Ongoing technical support and feature enhancements for your applications.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
