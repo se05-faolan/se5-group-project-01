@@ -1,25 +1,51 @@
-<section class="bg-white py-[64px] px-[16px]">
-  <div class="max-w-[768px] mx-auto flex flex-col items-center gap-[16px] text-center">
+<section class="bg-white py-[64px] px-[16px] font-sans">
+  <div class="max-w-[768px] mx-auto flex flex-col gap-[64px]">
     
-    <h2 class="font-display text-4xl lg:text-5xl font-bold text-brand-navy">About Us</h2>
-    <p class="font-sans text-base lg:text-lg text-brand-slate">Company description goes here.</p>
-    <p class="font-sans text-base lg:text-lg text-brand-slate">Additional info about company.</p>
-    
-    <div class="w-full h-64 bg-slate-300 rounded-lg flex items-center justify-center text-slate-500">
-      Image Placeholder
+    <div class="text-center flex flex-col gap-4">
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-brand-navy">About Us</h2>
+      <p class="text-base lg:text-lg text-brand-slate leading-relaxed">
+        TechNova Solutions is a dynamic IT consulting firm specializing in digital transformation for mid-sized enterprises. Founded in 2018, we help businesses modernize their technology infrastructure and build scalable software solutions.
+      </p>
+      <p class="text-base lg:text-lg text-brand-slate leading-relaxed">
+        Our team combines technical expertise with business acumen to deliver results that drive growth and efficiency.
+      </p>
+      <div class="w-full h-64 bg-slate-200 rounded-2xl overflow-hidden mt-4">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office" class="w-full h-full object-cover opacity-90">
+      </div>
     </div>
 
-    <h2 class="font-display text-4xl lg:text-5xl font-bold text-brand-navy mt-8">Our Team</h2>
-    
-    <div class="w-full flex flex-col gap-[16px]">
-      <div class="bg-slate-50 p-6 rounded-xl flex flex-col items-center gap-4">
-        <div class="w-24 h-24 bg-slate-400 rounded-full"></div>
-        <div>
-          <h3 class="font-display text-2xl font-semibold text-brand-navy">Team Member 1</h3>
-          <p class="font-sans text-sm text-brand-blue font-medium uppercase tracking-wide">Role</p>
+    <div class="flex flex-col gap-8">
+      <h2 class="font-display text-4xl lg:text-5xl font-bold text-brand-navy text-center">Our Team</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-slate-50 p-6 rounded-xl flex flex-col items-center text-center gap-4 border border-slate-100">
+          <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah Chen" class="w-24 h-24 rounded-full border-4 border-white shadow-sm">
+          <div>
+            <h3 class="font-display text-xl font-bold text-brand-navy">Sarah Chen</h3>
+            <p class="text-brand-blue font-medium text-sm mb-2 uppercase">CEO & Co-founder</p>
+            <p class="text-sm text-brand-slate">Former software architect with 15 years of experience. Leads strategic vision.</p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-xl flex flex-col items-center text-center gap-4 border border-slate-100">
+          <img src="https://i.pravatar.cc/150?u=marcus" alt="Marcus Rodriguez" class="w-24 h-24 rounded-full border-4 border-white shadow-sm">
+          <div>
+            <h3 class="font-display text-xl font-bold text-brand-navy">Marcus Rodriguez</h3>
+            <p class="text-brand-blue font-medium text-sm mb-2 uppercase">CTO & Co-founder</p>
+            <p class="text-sm text-brand-slate">Full-stack developer and cloud specialist. Oversees innovation.</p>
+          </div>
         </div>
       </div>
-      </div>
+    </div>
+
+    <div class="bg-brand-navy text-white p-8 rounded-2xl">
+      <h3 class="font-display text-2xl font-bold mb-6">Our Services</h3>
+      <ul class="grid grid-cols-1 gap-4 text-slate-300">
+        <li class="flex gap-2"><span class="text-brand-teal">✔</span> IT Consulting</li>
+        <li class="flex gap-2"><span class="text-brand-teal">✔</span> Custom App Development</li>
+        <li class="flex gap-2"><span class="text-brand-teal">✔</span> Cloud Migration</li>
+      </ul>
+    </div>
 
   </div>
 </section>
