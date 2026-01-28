@@ -35,9 +35,135 @@
     </main>
 
     <footer>
-        <h2>Hello</h2>
-        <p>&copy; 2026 WBS Coding School - SE5 Group Project 01. All rights reserved.</p>
-    </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Section</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #2563eb, #06b6d4);
+      padding: 20px;
+    }
+
+    .container {
+      width: 390px;
+      background: transparent;
+      border-radius: 20px;
+      padding: 30px 20px;
+      color: #f8fafc;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      outline: none;
+      background: #ffffff;
+      color: #1e293b;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #1e293b;
+      color: #ffffff;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0f172a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+
+    <div class="form-group">
+      <input type="text" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+      <input type="email" placeholder="Email">
+    </div>
+
+    <div class="form-group">
+      <textarea placeholder="Message"></textarea>
+    </div>
+
+    <button>Send</button>
+  </div>
+</body>
+</html>
+
+    <!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<footer class="bg-slate-800 text-slate-400 mt-8 py-6 text-center rounded-b-2xl">
+
+  <div class="flex justify-center gap-6 mb-3">
+    <a href="#" class="text-cyan-400 hover:text-white text-sm transition">
+      About
+    </a>
+    <a href="#" class="text-cyan-400 hover:text-white text-sm transition">
+      Services
+    </a>
+    <a href="#" class="text-cyan-400 hover:text-white text-sm transition">
+     Contact
+    </a>
+  </div>
+  <div class="flex justify-center gap-6 mb-3">
+    <a href="#" class="text-cyan-400 hover:text-white text-sm transition">
+      Twitter
+    </a>
+    <a href="#" class="text-cyan-400 hover:text-white text-sm transition">
+      LinkedIn
+    </a>
+    <a href="#" class="text-cyan-400 hover:text-white text-sm transition">
+      GitHub
+    </a>
+  </div>
+
+  <p class="text-xs text-slate-400">
+    © 2026 SES Team WBS Coding School. All rights reserved.
+  </p>
+</footer>
 
 </body>
 </html>
