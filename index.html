@@ -1,180 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <title>TechNova Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-navy': '#1e293b',
+                        'brand-slate': '#475569',
+                        'brand-blue': '#2563eb',
+                        'brand-teal': '#06b6d4',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        body {font-family: 'Inter', sans-serif;}
-        h1, h2, h3, h4, h5, h6 {font-family: 'Space Grotesk', sans-serif;}
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
     </style>
-  </head>
-  <body>
+</head>
+<body class="bg-slate-50 pt-20">
+
     <header class="bg-white shadow-md fixed w-full top-0 z-50">
-       <nav class="container mx-auto px-4 lg:px-8 xl:px-12 py-4" aria-label="Main navigation">
-            <!-- MOBILE AND TABLETS (max. 1023px) -->
-            <div class="lg:hidden flex items-center justify-between">
-
-                <!-- LOGO AND COMPANY'S NAME (LEFT SIDE) -->
-                <div class="flex items-center gap-3">
-                    <a href="#hero" class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0" aria-label="Home">
-                        <span class="text-xs text-white font-semibold">LOGO</span>
-                    </a>
-                    <h1 class="text-lg sm:text-xl font-bold text-slate-800">TechNova Solutions</h1>
-                </div>
-                <!-- HAMBURGER MENU (RIGHT SIDE) -->
-                <button 
-                    id="menuToggle" 
-                    class="w-10 h-10 flex flex-col justify-center items-center space-y-1.5 hover:bg-slate-50 rounded-lg transition-colors flex-shrink-0"
-                    aria-label="Toggle navigation menu"
-                    aria-expanded="false"
-                    aria-controls="mobileMenu">
-                    <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300" id="line1"></span>
-                    <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300" id="line2"></span>
-                    <span class="block w-6 h-0.5 bg-slate-800 transition-all duration-300" id="line3"></span>
-                </button>
-            </div>
-            <!-- MENU MOBILE/TABLET -->
-            <nav id="mobileMenu" class="lg:hidden hidden mt-4 pb-4" aria-label="Mobile navigation">
-                <ul class="flex flex-col space-y-3">
-                    <li><a href="#hero" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Home</a></li>
-                    <li><a href="#stats" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Stats</a></li>
-                    <li><a href="#about-us" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">About Us</a></li>
-                    <li><a href="#our-team" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Team</a></li>
-                    <li><a href="#our-services" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Services</a></li>
-                    <li><a href="#contact-us" class="block py-2 px-4 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Contact Us</a></li>
-                </ul>
-            </nav>
-            <!-- DESKTOP (1024px OR BIGGER) -->
-            <div class="hidden lg:flex items-center justify-between">
-
-                <!-- LOGO AND COMPANY'S NAME (LEFT SIDE) -->
+       <nav class="container mx-auto px-4 lg:px-8 xl:px-12 py-4">
+            <div class="flex items-center justify-between">
                 <div class="flex items-center gap-4">
-                    <a href="#hero" class="w-14 h-14 xl:w-16 xl:h-16 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 hover:bg-cyan-500 transition-colors" aria-label="Home">
-                        <span class="text-xs text-white font-semibold">LOGO</span>
-                    </a>
-                    <h1 class="text-2xl xl:text-3xl font-bold text-slate-800">TechNova Solutions</h1>
+                    <a href="#hero" class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">LOGO</a>
+                    <h1 class="text-xl font-bold text-slate-800">TechNova Solutions</h1>
                 </div>
-                <!-- MENU DESKTOP (RIGHT SIDE) -->
-                <nav aria-label="Desktop navigation">
-                    <ul class="flex items-center space-x-2 xl:space-x-4">
-                        <li><a href="#hero" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Home</a></li>
-                        <li><a href="#stats" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Stats</a></li>
-                        <li><a href="#about-us" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">About Us</a></li>
-                        <li><a href="#our-team" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Team</a></li>
-                        <li><a href="#our-services" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Our Services</a></li>
-                        <li><a href="#contact-us" class="px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-blue-600 rounded-lg transition-colors font-medium">Contact Us</a></li>
-                    </ul>
-                </nav>
+                <ul class="hidden lg:flex space-x-6 text-slate-700 font-medium">
+                    <li><a href="#hero" class="hover:text-blue-600">Home</a></li>
+                    <li><a href="#about-us" class="hover:text-blue-600">About Us</a></li>
+                    <li><a href="#our-team" class="hover:text-blue-600">Our Team</a></li>
+                    <li><a href="#our-services" class="hover:text-blue-600">Services</a></li>
+                </ul>
             </div>
-        </nav>
+       </nav>
     </header>
-    <main class="pt-20">
-      <!-- Hero Section -->
-      <section
-        id="hero"
-        class="py-24 px-4 text-center bg-gradient-to-b from-slate-900 to-slate-800 text-white"
-      >
-        <h1 class="font-['Space_Grotesk'] text-5xl lg:text-6xl font-bold mb-4">
-          Transform Your Business with TechNova Solutions
-        </h1>
-        <p
-          class="font-['Inter'] text-base lg:text-lg font-normal text-slate-400 max-w-xl mx-auto mb-6"
-        >
-          Driving digital transformation for mid-sized enterprises with scalable
-          software, cloud migration, and IT consulting expertise.
-        </p>
-        <button
-          class="font-['Inter'] text-base font-semibold px-6 py-3 bg-blue-600 hover:bg-teal-400 rounded text-white transition-colors duration-300"
-        >
-          Get Started
-        </button>
-      </section>
-      <!-- Stats Section -->
-      <section id="stats" class="py-24 px-4 bg-slate-50">
-        <div class="flex flex-col md:flex-row justify-center gap-6">
-          <div class="flex-1 p-6 bg-white rounded shadow text-center">
-            <h3
-              class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-blue-600"
-            >
-              50+
-            </h3>
-            <p class="font-['Inter'] text-sm font-normal text-slate-500 mt-2">
-              Projects Delivered
-            </p>
-          </div>
-          <div class="flex-1 p-6 bg-white rounded shadow text-center">
-            <h3
-              class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-blue-600"
-            >
-              10+
-            </h3>
-            <p class="font-['Inter'] text-sm font-normal text-slate-500 mt-2">
-              Years of Combined Experience
-            </p>
-          </div>
-          <div class="flex-1 p-6 bg-white rounded shadow text-center">
-            <h3
-              class="font-['Space_Grotesk'] text-2xl lg:text-3xl font-bold text-blue-600"
-            >
-              100%
-            </h3>
-            <p class="font-['Inter'] text-sm font-normal text-slate-500 mt-2">
-              Client Satisfaction Rate
-            </p>
+
+    <main>
+        <section id="hero" class="py-24 px-4 text-center bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+            <h1 class="text-5xl lg:text-6xl font-bold mb-4">Transform Your Business with TechNova Solutions</h1>
+            <p class="text-slate-400 max-w-xl mx-auto mb-6">Driving digital transformation for mid-sized enterprises with scalable software and IT consulting.</p>
+            <button class="px-6 py-3 bg-blue-600 hover:bg-brand-teal rounded text-white font-semibold transition-colors">Get Started</button>
+        </section>
+
+        <section id="about-us" class="bg-white py-[64px] px-[16px]">
+        <div class="max-w-[768px] mx-auto flex flex-col items-center gap-8 text-center">
+          <h2 class="text-4xl lg:text-5xl font-bold text-brand-navy">About Us</h2>
+          <p class="text-base lg:text-lg text-brand-slate leading-relaxed">
+            TechNova Solutions is a dynamic IT consulting firm specializing in digital transformation for mid-sized enterprises. Founded in 2018, we help businesses modernize their technology infrastructure and build scalable software solutions. Our team combines technical expertise with business acumen to deliver results that drive growth and efficiency.
+          </p>
+          <div class="w-full h-80 bg-slate-200 rounded-2xl overflow-hidden shadow-md">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="TechNova Office" class="w-full h-full object-cover">
           </div>
         </div>
       </section>
-      <section class="about-us"></section>
-      <section class="our-team"></section>
-      <section class="our-services"></section>
-      <section class="contact-us"></section>
-    </main>
-    <footer>
-      <p>
-        &copy; 2026 WBS Coding School - SE5 Group Project 01. All rights
-        reserved.
-      </p>
-    </footer>
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const line1 = document.getElementById('line1');
-        const line2 = document.getElementById('line2');
-        const line3 = document.getElementById('line3');
-        if (menuToggle) {
-            menuToggle.addEventListener('click', () => {
-                const isExpanded = mobileMenu.classList.toggle('hidden');
-                menuToggle.setAttribute('aria-expanded', !isExpanded);
-           
-                // X ANIMATION
-                if (!mobileMenu.classList.contains('hidden')) {
-                    line1.style.transform = 'rotate(45deg) translateY(8px)';
-                    line2.style.opacity = '0';
-                    line3.style.transform = 'rotate(-45deg) translateY(-8px)';
-                } else {
-                    line1.style.transform = 'rotate(0) translateY(0)';
-                    line2.style.opacity = '1';
-                    line3.style.transform = 'rotate(0) translateY(0)';
-                }
-            });
 
-            // CLOSING MENU ON CLICK
-            const menuLinks = document.querySelectorAll('#mobileMenu a');
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    line1.style.transform = 'rotate(0) translateY(0)';
-                    line2.style.opacity = '1';
-                    line3.style.transform = 'rotate(0) translateY(0)';
-                });
-            });
-        }
-    </script>
+      <section id="our-team" class="py-[64px] px-[16px] bg-slate-50">
+        <div class="max-w-[1024px] mx-auto flex flex-col items-center gap-12 text-center">
+          <h2 class="text-4xl lg:text-5xl font-bold text-brand-navy">Our Team</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <div class="flex flex-col items-center p-4">
+              <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah Chen" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg">
+              <h3 class="text-xl font-bold text-brand-navy">Sarah Chen</h3>
+              <p class="text-brand-blue font-medium text-sm uppercase mb-2">CEO & Co-founder</p>
+              <p class="text-sm text-brand-slate">Former software architect with 15 years of experience in enterprise systems. Leads strategic vision and client partnerships.</p>
+            </div>
+
+            <div class="flex flex-col items-center p-4">
+              <img src="https://i.pravatar.cc/150?u=marcus" alt="Marcus Rodriguez" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg">
+              <h3 class="text-xl font-bold text-brand-navy">Marcus Rodriguez</h3>
+              <p class="text-brand-blue font-medium text-sm uppercase mb-2">CTO & Co-founder</p>
+              <p class="text-sm text-brand-slate">Full-stack developer and cloud architecture specialist. Oversees technical delivery and innovation.</p>
+            </div>
+
+            <div class="flex flex-col items-center p-4">
+              <img src="https://i.pravatar.cc/150?u=aisha" alt="Aisha Patel" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg">
+              <h3 class="text-xl font-bold text-brand-navy">Aisha Patel</h3>
+              <p class="text-brand-blue font-medium text-sm uppercase mb-2">Lead Consultant</p>
+              <p class="text-sm text-brand-slate">Business analyst with expertise in process optimization and digital strategy. Manages client engagements.</p>
+            </div>
+
+            <div class="flex flex-col items-center p-4">
+              <img src="https://i.pravatar.cc/150?u=james" alt="James Kim" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg">
+              <h3 class="text-xl font-bold text-brand-navy">James Kim</h3>
+              <p class="text-brand-blue font-medium text-sm uppercase mb-2">Senior Developer</p>
+              <p class="text-sm text-brand-slate">Mobile and web application specialist. Leads development teams on client projects.</p>
+            </div>
+
+            <div class="flex flex-col items-center p-4">
+              <img src="https://i.pravatar.cc/150?u=elena" alt="Elena Volkov" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white shadow-lg">
+              <h3 class="text-xl font-bold text-brand-navy">Elena Volkov</h3>
+              <p class="text-brand-blue font-medium text-sm uppercase mb-2">UX/UI Designer</p>
+              <p class="text-sm text-brand-slate">Creates intuitive user experiences with a focus on accessibility and modern design principles.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="our-services" class="py-[64px] px-[16px] bg-white">
+        <div class="max-w-[1024px] mx-auto flex flex-col items-center gap-12 text-center">
+          <h2 class="text-4xl lg:text-5xl font-bold text-brand-navy">Our Services</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <h4 class="font-bold text-brand-navy mb-3">IT Consulting</h4>
+              <p class="text-sm text-brand-slate text-center">Strategic technology planning, system architecture review, and digital transformation roadmaps tailored to your business goals.</p>
+            </div>
+            <div class="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <h4 class="font-bold text-brand-navy mb-3">Custom App Development</h4>
+              <p class="text-sm text-brand-slate text-center">Native mobile apps (iOS/Android) and responsive web applications built with modern frameworks like React, Node.js, and Flutter.</p>
+            </div>
+            <div class="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <h4 class="font-bold text-brand-navy mb-3">Cloud Migration</h4>
+              <p class="text-sm text-brand-slate text-center">Seamless transition to AWS, Azure, or Google Cloud with optimized infrastructure and cost management.</p>
+            </div>
+            <div class="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <h4 class="font-bold text-brand-navy mb-3">API Integration</h4>
+              <p class="text-sm text-brand-slate text-center">Connect your existing systems with third-party services and build custom APIs for data exchange.</p>
+            </div>
+            <div class="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <h4 class="font-bold text-brand-navy mb-3">DevOps & Automation</h4>
+              <p class="text-sm text-brand-slate text-center">CI/CD pipeline setup, automated testing, and deployment workflows to accelerate your development cycle.</p>
+            </div>
+            <div class="p-6 border border-slate-100 rounded-xl hover:shadow-md transition-shadow">
+              <h4 class="font-bold text-brand-navy mb-3">Maintenance & Support</h4>
+              <p class="text-sm text-brand-slate text-center">Ongoing technical support, bug fixes, and feature enhancements to keep your applications running smoothly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-8 text-center text-slate-500 border-t border-slate-200">
+        <p>&copy; 2026 TechNova Solutions. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
