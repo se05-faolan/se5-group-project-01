@@ -12,6 +12,7 @@
 </head>
 
 <body class="bg-slate-50 pt-20">
+
   <header class="bg-white shadow-md fixed w-full top-0 z-50">
     <nav class="container mx-auto px-4 lg:px-8 xl:px-12 py-4" aria-label="Main navigation">
 
@@ -260,5 +261,44 @@
   © 2026 SES Team WBS Coding School. All rights reserved.
   </p>
   </footer>
+
+  <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const line3 = document.getElementById('line3');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = mobileMenu.classList.toggle('hidden');
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                
+                // Animação do hamburger para X
+                if (!mobileMenu.classList.contains('hidden')) {
+                    line1.style.transform = 'rotate(45deg) translateY(8px)';
+                    line2.style.opacity = '0';
+                    line3.style.transform = 'rotate(-45deg) translateY(-8px)';
+                } else {
+                    line1.style.transform = 'rotate(0) translateY(0)';
+                    line2.style.opacity = '1';
+                    line3.style.transform = 'rotate(0) translateY(0)';
+                }
+            });
+
+            // Fechar menu ao clicar em um link
+            const menuLinks = document.querySelectorAll('#mobileMenu a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    line1.style.transform = 'rotate(0) translateY(0)';
+                    line2.style.opacity = '1';
+                    line3.style.transform = 'rotate(0) translateY(0)';
+                });
+            });
+        }
+  </script>
+
 </body>
 </html>
